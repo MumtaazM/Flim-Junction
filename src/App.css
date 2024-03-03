@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-roboto: "Roboto Slab", serif;
+    --font-raleway: "Raleway", sans-serif;
+}
+
+body {
+    font-family: var(--font-roboto);
+    background-color: #212426;
+}
+
+.app {
+    padding: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: #f9d3b4;
+    width: fit-content;
+    text-align: center;
+}
+
+span {
+    color: rgb(157, 28, 28);
+}
+
+.search {
+    width: 71%;
+    min-width: 15rem;
+    margin: 4rem 0 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.5rem 1.75rem;
+    border-radius: 3rem;
+    background: #1f2123;
+    -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+    box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+}
+
+.search input {
+    min-width: 30%;
+    flex: 1;
+    border: none;
+    font-size: 1.5rem;
+    font-family: var(--font-raleway);
+    font-weight: 500;
+    padding-right: 1rem;
+
+    outline: none;
+    color: #f9d3b4;
+    background: #1f2123;
+}
+
+.search input::placeholder {
+    color: #f9d3b47d;
+}
+
+.search img {
+    width: 1.8rem;
+    cursor: pointer;
+}
+
+
+
+.movie_grid {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, 17rem);
+    gap: 3rem;
+    margin-top: 2rem;
+
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.movie img {
+    width: 17rem;
+    border-radius: 10px;
+}
+
+.movie h3 {
+    color: rgb(255, 240, 215);
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+
+}
+
+nav button {
+    width: 2.2rem;
+    height: 2rem;
+    background-color: #80634c;
+    border-radius: 20px;
+    color: white;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    gap: 5rem;
+    color: white;
+    font-size: 1.2rem;
+    justify-content: center;
+    margin-left: -1.8rem;
+    margin-right: 0.7rem;
+}
+
+li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 700px) {
+    .movie_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+
+    .movie img {
+        width: 18rem;
+    }
+}
